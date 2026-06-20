@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediasync"
+version = "0.1.0"
+description = "Synchronize media from multiple sources between devices"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Dart Spark" }
+]
+dependencies = [
+  "dropbox",
+  "yt-dlp",
+]
+
+[project.scripts]
+mediasync = "mediasync.__main__:main"
+
+[project.urls]
+Homepage = "https://pypi.org/project/mediasync/"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
